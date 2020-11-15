@@ -26,7 +26,7 @@ const LOAD = BASE_URL."system/core/Libraries/Load.php";
 const DB_HOST = "localhost";
 const DB_USER = "root";
 const DB_PASS = "";
-const DB_NAME = "db_tienda";
+const DB_NAME = "db_personal";
 const DB_CHARSET = "charset=utf8";
 
 //delimitador decimal y millar Ej. 24,1999.00
@@ -36,5 +36,5 @@ const SPM = '.';
 const SMONEY = '$';
 //constantes de encriptacion
 define('METHOD','AES-256-CBC');
-define('SECRET_KEY','$T13n8@');
+define('SECRET_KEY','$p3r50n@l');
 define('SECRET_IV','101712');

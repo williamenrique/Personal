@@ -2,11 +2,11 @@
 
 <section>
 	<div class="main-content">
-	<!-- content -->
+		<!-- content -->
 		<div class="container-fluid content-top-gap">
 
 			<div class="welcome-msg pt-3 pb-4">
-				<h1>Hi <span class="text-primary">William</span>, Bienvenido</h1>
+				<h1>Hi <span class="text-primary"><?= $_SESSION['userData']['nombre']?></span>, Bienvenido</h1>
 				<p>Very detailed &amp; featured admin.</p>
 			</div>
 

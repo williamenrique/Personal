@@ -67,8 +67,8 @@ function formatear_fecha($fecha){
 	return $salida;
 }
 function sessionUser(int $idUser){
-	require_once ("system/app/Models/LoginModel.php");
-	$objLogin = new LoginModel();
+	require_once ("system/app/Models/AccesoModel.php");
+	$objLogin = new AccesoModel();
 	$request = $objLogin->sessionLogin($idUser);
 	return $request;
 }
