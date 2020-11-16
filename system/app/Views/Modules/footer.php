@@ -36,7 +36,6 @@ function topFunction() {
 
   <script src="<?= PLUGINS?>jquery.nicescroll/jquery.nicescroll.js"></script>
   <script src="<?= PLUGINS?>script/scripts.js"></script>
-  <script src="<?= PLUGINS?>dataTables/jquery.dataTables.min.js"></script>
 
   <!-- close script -->
   <script>
@@ -73,9 +72,16 @@ $(window).load(function() {
 
   <!-- Bootstrap Core JavaScript -->
   <script src="<?= JS_VENDORS?>bootstrap.min.js"></script>
+  <script src="<?= PLUGINS?>dataTable/jquery.dataTables.min.js"></script>
+  <script src="<?= PLUGINS?>dataTable/js/dataTables.bootstrap4.min.js"></script>
+  <script src="<?= PLUGINS?>dataTable/js/jquery.dataTables.min.js"></script>
+  <script src="<?= PLUGINS?>dataTable/js/dataTables.responsive.min.js"></script>
+  <script src="<?= PLUGINS?>dataTable/js/responsive.bootstrap4.min.js"></script>
+
   <script src="<?= PLUGINS?>sweetalert/sweetalert2@10.js"></script>
   <script src="<?= JS?>function.main.js"></script>
 
+  <script src="<?= JS.$data['page_functions']?>"></script>
   </body>
 
   </html>

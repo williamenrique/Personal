@@ -12,18 +12,28 @@
 			</nav>
 
 			<!-- data tables -->
-			<div class="data-tables">
+			<div class="">
 				<div class="row">
 					<div class="col-lg-12 mb-4">
 						<div class="card card_border p-4">
-							<h3 class="card__title position-absolute">All Employees Info</h3>
-							<div class="table-responsive">
-								<table id="cuenta">
-									<thead>
-										<tr>ID</tr>
-									</thead>
-								</table>
-							</div>
+							<table id="tableCuentas" class="data-table table stripe hover nowrap" style="width:100%">
+								<thead>
+									<tr>
+										<th scope="col">ID</th>
+										<th scope="col">Nick</th>
+										<th scope="col">Nombres</th>
+										<th scope="col">Apellidos</th>
+										<th scope="col">Email</th>
+										<th scope="col">Telefono</th>
+										<th scope="col">Rol</th>
+										<th scope="col">Status</th>
+										<th scope="col">Acciones</th>
+									</tr>
+								</thead>
+								<tbody>
+
+								</tbody>
+							</table>
 						</div>
 					</div>
 				</div>

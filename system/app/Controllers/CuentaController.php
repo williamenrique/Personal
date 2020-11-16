@@ -5,7 +5,8 @@ class Cuenta extends Controllers{
 		parent::__construct();
 	}
 	public function Cuenta(){
-			$data['page_title'] = "Personal - Cuentas";
+		$data['page_title'] = "Personal - Cuentas";
+		$data['page_functions'] = "function.cuenta.js";
 		$this->views->getViews($this, "cuenta",$data);
 	}
 }
