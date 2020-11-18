@@ -1,23 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title><?= $data['page_title']?></title>
-	<link rel="stylesheet" href="<?= PLUGINS?>sweetalert/sweetalert2.css">
-	<link rel="stylesheet" href="<?= CSS?>styles.main.css">
-	<link rel="stylesheet" href="<?= CSS_VENDORS?>style-starter.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!-- Required meta tags -->
 
-	<link rel="stylesheet" href="<?= PLUGINS?>dataTable/datatables.min.css" />
-	<!-- <link rel="stylesheet" href="<?= PLUGINS?>dataTable/css/dataTables.bootstrap4.min.css" />
-	<link rel="stylesheet" href="<?= PLUGINS?>dataTable/css/responsive.bootstrap4.min.css" />
-	<link rel="stylesheet" href="<?= PLUGINS?>dataTable/css/jquery.dataTables.min.css" /> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title><?= $data['page_title']?></title>
+	<!-- plugins:css -->
+	<link rel="stylesheet" href="<?= PLUGINS?>flag-icon.min.css">
+	<link rel="stylesheet" href="<?= PLUGINS?>materialdesignicons.min.css">
+	<link rel="stylesheet" href="<?= PLUGINS?>font-awesome.min.css">
+	<link rel="stylesheet" href="<?= PLUGINS?>simple-line-icons.css">
+	<link rel="stylesheet" href="<?= PLUGINS?>feather.css">
+	<link rel="stylesheet" href="<?= PLUGINS?>vendor.bundle.base.css">
+	<!-- endinject -->
+	<!-- inject:css -->
+	<link rel="stylesheet" href="<?= PLUGINS?>style.css">
+	<!-- endinject -->
+	<link rel="shortcut icon" href="<?= IMG?>favicon.png">
+
 </head>
 
-<body class="sidebar-menu-collapsed">
-	<div class="se-pre-con"></div>
-	<?php
-require_once 'sidebar.php';
-require_once 'header-nav.php';
-?>
+<body style="" class="sidebar-fixed">
+	<div class="container-scroller">
+		<!-- navbar-->
+		<?php require_once 'nav.php'?>
+		<div class="container-fluid page-body-wrapper">
+			<!-- skin -->
+			<?php // require_once 'skin.php'?>
+			<!-- sidebar-rigt -->
+			<?php require_once 'sidebar-rigth.php'?>
+			<!-- sidebar menu -->
+			<?php require_once 'navSidebar.php'?>
+			<!-- partial -->
+			<div class="main-panel">
+				<div class="content-wrapper">

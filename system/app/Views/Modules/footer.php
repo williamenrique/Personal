@@ -1,14 +1,27 @@
-  <!--footer section start-->
-  <footer class="dashboard">
-  	<p>&copy 2020 Collective. All Rights Reserved | Design by <a href=#" target="_blank"
-  			class="text-primary">workinfo</a></p>
-  </footer>
-  <!--footer section end-->
-  <!-- move top -->
-  <button onclick="topFunction()" id="movetop" class="bg-primary" title="Go to top">
-  	<span class="fa fa-angle-up"></span>
-  </button>
-  <script>
+	</div>
+	<!-- content-wrapper ends -->
+	<footer class="footer">
+		<div class="container-fluid clearfix">
+			<span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2020 <a
+					href="#">Workinfo</a>.
+				All rights reserved.</span>
+			<span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted &amp; made with <i
+					class="mdi mdi-heart text-danger"></i></span>
+		</div>
+	</footer>
+	<!-- partial -->
+	</div>
+	<!-- main-panel ends -->
+	</div>
+	<!-- page-body-wrapper ends -->
+	</div>
+	<!-- container-scroller -->
+	<!-- move top -->
+	<!-- <button onclick="topFunction()" id="movetop" class="bg-primary" title="Go to top">
+	<span class="fa fa-angle-up"></span>
+</button> -->
+	<script>
+/*
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {
 	scrollFunction()
@@ -27,61 +40,39 @@ function topFunction() {
 	document.body.scrollTop = 0;
 	document.documentElement.scrollTop = 0;
 }
-  </script>
-  <!-- /move top -->
+*/
+	</script>
+	<!-- /move top -->
 
 
-  <script src="<?= PLUGINS?>jquery/jquery-3.3.1.min.js"></script>
-  <script src="<?= PLUGINS?>jquery/jquery-1.10.2.min.js"></script>
+	<!-- <script src="<?= PLUGINS?>jquery/jquery-3.3.1.min.js"></script>
+	<script src="<?= PLUGINS?>jquery/jquery-1.10.2.min.js"></script> -->
 
-  <script src="<?= PLUGINS?>jquery.nicescroll/jquery.nicescroll.js"></script>
-  <script src="<?= PLUGINS?>script/scripts.js"></script>
+	<!-- loading-gif Js -->
+	<!-- <script src="<?= PLUGINS?>modernizr/modernizr.js"></script> -->
+	<script>
+// $(window).load(function() {
+// 	// Animate loader off screen
+// 	$(".se-pre-con").fadeOut("slow");;
+// });
+	</script>
+	<!--// loading-gif Js -->
 
-  <!-- close script -->
-  <script>
-var closebtns = document.getElementsByClassName("close-grid");
-var i;
+	<!-- plugins:js -->
+	<script src="<?= PLUGINS?>vendor.bundle.base.js"></script>
+	<!-- endinject -->
+	<!-- Plugin js for this page-->
+	<!-- End plugin js for this page-->
+	<!-- inject:js -->
+	<script src="<?= PLUGINS?>off-canvas.js"></script>
+	<script src="<?= PLUGINS?>hoverable-collapse.js"></script>
+	<script src="<?= PLUGINS?>template.js"></script>
+	<script src="<?= PLUGINS?>settings.js"></script>
+	<script src="<?= PLUGINS?>todolist.js"></script>
+	<script src="<?= PLUGINS?>all.js"></script>
+	<!-- endinject -->
+	<!-- Custom js for this page-->
+	<!-- End custom js for this page-->
+	</body>
 
-for (i = 0; i < closebtns.length; i++) {
-	closebtns[i].addEventListener("click", function() {
-		this.parentElement.style.display = 'none';
-	});
-}
-  </script>
-  <!-- //close script -->
-
-  <!-- disable body scroll when navbar is in active -->
-  <script>
-$(function() {
-	$('.sidebar-menu-collapsed').click(function() {
-		$('body').toggleClass('noscroll');
-	})
-});
-  </script>
-  <!-- disable body scroll when navbar is in active -->
-
-  <!-- loading-gif Js -->
-  <script src="<?= PLUGINS?>modernizr/modernizr.js"></script>
-  <script>
-$(window).load(function() {
-	// Animate loader off screen
-	$(".se-pre-con").fadeOut("slow");;
-});
-  </script>
-  <!--// loading-gif Js -->
-
-  <!-- Bootstrap Core JavaScript -->
-  <script src="<?= JS_VENDORS?>bootstrap.min.js"></script>
-  <script src="<?= PLUGINS?>dataTable/jquery.dataTables.min.js"></script>
-  <script src="<?= PLUGINS?>dataTable/js/dataTables.bootstrap4.min.js"></script>
-  <script src="<?= PLUGINS?>dataTable/js/jquery.dataTables.min.js"></script>
-  <script src="<?= PLUGINS?>dataTable/js/dataTables.responsive.min.js"></script>
-  <script src="<?= PLUGINS?>dataTable/js/responsive.bootstrap4.min.js"></script>
-
-  <script src="<?= PLUGINS?>sweetalert/sweetalert2@10.js"></script>
-  <script src="<?= JS?>function.main.js"></script>
-
-  <script src="<?= JS.$data['page_functions']?>"></script>
-  </body>
-
-  </html>
+	</html>

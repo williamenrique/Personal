@@ -1,6 +1,6 @@
 let tableCuenta;
 document.addEventListener('DOMContentLoaded', function () {
-	tableCuenta = $('#tableCuentas').DataTable({
+	tableCuenta = $('#tableCuenta').DataTable({
 			"language": {
 			"sProcessing": "Procesando...",
 			"sLengthMenu": "Mostrar _MENU_ registros",
@@ -54,5 +54,5 @@ document.addEventListener('DOMContentLoaded', function () {
 		"order": [[0, "asc"]]
 	});
 
-	$('#tableCuentas').DataTable();
+	$('#tableCuenta').DataTable();
 },false)
