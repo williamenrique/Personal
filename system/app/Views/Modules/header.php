@@ -16,6 +16,7 @@
 	<link rel="stylesheet" href="<?= PLUGINS?>vendor.bundle.base.css">
 	<!-- endinject -->
 	<!-- inject:css -->
+	<link rel="stylesheet" href="<?= PLUGINS?>dataTable/dataTables.bootstrap4.css">
 	<link rel="stylesheet" href="<?= PLUGINS?>style.css">
 	<!-- endinject -->
 	<link rel="shortcut icon" href="<?= IMG?>favicon.png">

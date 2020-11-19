@@ -6,7 +6,7 @@
 					href="#">Workinfo</a>.
 				All rights reserved.</span>
 			<span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted &amp; made with <i
-					class="mdi mdi-heart text-danger"></i></span>
+					class="far fa-heart text-danger"></i></span>
 		</div>
 	</footer>
 	<!-- partial -->
@@ -18,10 +18,9 @@
 	<!-- container-scroller -->
 	<!-- move top -->
 	<!-- <button onclick="topFunction()" id="movetop" class="bg-primary" title="Go to top">
-	<span class="fa fa-angle-up"></span>
-</button> -->
+		<span class="fa fa-angle-up"></span>
+	</button> -->
 	<script>
-/*
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {
 	scrollFunction()
@@ -40,7 +39,6 @@ function topFunction() {
 	document.body.scrollTop = 0;
 	document.documentElement.scrollTop = 0;
 }
-*/
 	</script>
 	<!-- /move top -->
 
@@ -55,24 +53,30 @@ function topFunction() {
 // 	// Animate loader off screen
 // 	$(".se-pre-con").fadeOut("slow");;
 // });
+const base_url = "<?= base_url()?>";
 	</script>
 	<!--// loading-gif Js -->
 
 	<!-- plugins:js -->
 	<script src="<?= PLUGINS?>vendor.bundle.base.js"></script>
 	<!-- endinject -->
-	<!-- Plugin js for this page-->
-	<!-- End plugin js for this page-->
-	<!-- inject:js -->
 	<script src="<?= PLUGINS?>off-canvas.js"></script>
 	<script src="<?= PLUGINS?>hoverable-collapse.js"></script>
 	<script src="<?= PLUGINS?>template.js"></script>
 	<script src="<?= PLUGINS?>settings.js"></script>
 	<script src="<?= PLUGINS?>todolist.js"></script>
 	<script src="<?= PLUGINS?>all.js"></script>
+	<!-- plugin js for this page -->
+
+	<script src="<?= PLUGINS?>jquery/jquery-3.3.1.min.js"></script>
+
+	<script src="<?= PLUGINS?>dataTable/jquery.dataTables.js"></script>
+	<script src="<?= PLUGINS?>dataTable/dataTables.bootstrap4.js"></script>
+	<script src="<?= PLUGINS?>dataTable/data-table.js"></script>
+	<script src="<?= PLUGINS?>dataTable/data-table.js"></script>
+
+	<script src="<?= JS.$data['page_functions']?>"></script>
 	<!-- endinject -->
-	<!-- Custom js for this page-->
-	<!-- End custom js for this page-->
 	</body>
 
 	</html>

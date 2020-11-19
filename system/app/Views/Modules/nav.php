@@ -1,12 +1,11 @@
 		<nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
 			<div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
 				<a class="navbar-brand brand-logo" href="<?= base_url()?>"><img src="<?= IMG?>logo.svg" alt="logo"></a>
-				<a class="navbar-brand brand-logo-mini" href="<?= base_url()?>"><img src="./baln_page_files/logo-mini.svg"
-						alt="logo"></a>
+				<a class="navbar-brand brand-logo-mini" href="<?= base_url()?>"><img src="<?= IMG?>logo-mini.svg" alt="logo"></a>
 			</div>
 			<div class="navbar-menu-wrapper d-flex align-items-center">
 				<button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-					<span class="icon-menu"></span>
+					<i class="fas fa-bars"></i>
 				</button>
 				<ul class="navbar-nav">
 					<li class="nav-item dropdown d-none d-lg-flex">
@@ -37,7 +36,7 @@
 					</li>
 				</ul>
 				<ul class="navbar-nav navbar-nav-right">
-					<li class="nav-item dropdown d-none d-lg-flex">
+					<!-- <li class="nav-item dropdown d-none d-lg-flex">
 						<a class="nav-link dropdown-toggle" id="languageDropdown"
 							href="https://www.bootstrapdash.com/demo/libertyui/template/demo/vertical-default-dark/pages/samples/blank-page.html#"
 							data-toggle="dropdown">
@@ -69,12 +68,12 @@
 								Arabic
 							</a>
 						</div>
-					</li>
+					</li> -->
 					<li class="nav-item dropdown">
 						<a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown"
 							href="https://www.bootstrapdash.com/demo/libertyui/template/demo/vertical-default-dark/pages/samples/blank-page.html#"
 							data-toggle="dropdown">
-							<i class="icon-bell mx-0"></i>
+							<i class="far fa-bell mx-0"></i>
 							<span class="count"></span>
 						</a>
 						<div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
@@ -116,7 +115,7 @@
 							<a class="dropdown-item preview-item">
 								<div class="preview-thumbnail">
 									<div class="preview-icon bg-info">
-										<i class="icon-envelope mx-0"></i>
+										<i class="fas fa-power-off mx-0"></i>
 									</div>
 								</div>
 								<div class="preview-item-content">
@@ -132,7 +131,7 @@
 						<a class="nav-link count-indicator dropdown-toggle" id="messageDropdown"
 							href="https://www.bootstrapdash.com/demo/libertyui/template/demo/vertical-default-dark/pages/samples/blank-page.html#"
 							data-toggle="dropdown" aria-expanded="false">
-							<i class="icon-envelope mx-0"></i>
+							<i class="fas fa-power-off mx-0"></i>
 							<span class="count"></span>
 						</a>
 						<div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
@@ -186,8 +185,13 @@
 						</div>
 					</li>
 					<li class="nav-item nav-settings d-none d-lg-block">
-						<a class="nav-link" href="<?= base_url()?>#">
-							<i class="icon-grid"></i>
+						<a class="nav-link" href="<?= base_url()?>">
+							<i class="fas fa-th-large"></i>
+						</a>
+					</li>
+					<li class="nav-item d-none d-lg-block">
+						<a class="nav-link" href="<?= base_url()?>logout">
+							<i class="fas fa-power-off mx-0"></i>
 						</a>
 					</li>
 				</ul>
