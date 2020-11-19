@@ -18999,7 +18999,7 @@ a.text-dark:hover, a.text-dark:focus {
   .table, .jsgrid .jsgrid-table {
     border-collapse: collapse !important;
   }
-  
+
   .table td,
   .jsgrid .jsgrid-table td, .table th, .jsgrid .jsgrid-table th {
     background-color: #ffffff !important;
@@ -27262,7 +27262,7 @@ div.dataTables_wrapper div.dataTables_length select {
   font-size: 25px;
   line-height: 1;
   font-weight: 600;
-  color: #fff;
+  /* color: #fff; */
   font-weight: initial;
   margin-bottom: 0;
 }
@@ -27291,14 +27291,14 @@ div.dataTables_wrapper div.dataTables_length select {
 .swal2-modal .swal2-buttonswrapper .swal2-styled.swal2-cancel {
   margin-top: 32px;
   border: 1px solid #2a2c40;
-  color: #ffffff;
+  /* color: #ffffff; */
   font-weight: initial;
 }
 
 .swal2-modal .swal2-content {
   font-size: 0.875rem;
   font-weight: 600;
-  color: #fff;
+  /* color: #fff; */
   font-weight: initial;
   margin-top: 11px;
 }
@@ -28051,8 +28051,9 @@ div.tagsinput span.tag a {
 /* === Landing screens === */
 /* Auth */
 .auth .login-half-bg {
-  background: url("../../images/auth/login-bg.jpg");
-  background-size: cover;
+  background: url("../../images/undraw.png");
+	background-size: cover;
+	background-position: center;
 }
 
 .auth .register-half-bg {

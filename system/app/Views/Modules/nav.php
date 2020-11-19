@@ -69,69 +69,11 @@
 							</a>
 						</div>
 					</li> -->
+
 					<li class="nav-item dropdown">
-						<a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown"
-							href="https://www.bootstrapdash.com/demo/libertyui/template/demo/vertical-default-dark/pages/samples/blank-page.html#"
-							data-toggle="dropdown">
-							<i class="far fa-bell mx-0"></i>
-							<span class="count"></span>
-						</a>
-						<div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
-							aria-labelledby="notificationDropdown">
-							<a class="dropdown-item">
-								<p class="mb-0 font-weight-normal float-left">You have 4 new notifications
-								</p>
-								<span class="badge badge-pill badge-warning float-right">View all</span>
-							</a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item preview-item">
-								<div class="preview-thumbnail">
-									<div class="preview-icon bg-success">
-										<i class=" icon-ban mx-0"></i>
-									</div>
-								</div>
-								<div class="preview-item-content">
-									<h6 class="preview-subject font-weight-medium">Application Error</h6>
-									<p class="font-weight-light small-text">
-										Just now
-									</p>
-								</div>
-							</a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item preview-item">
-								<div class="preview-thumbnail">
-									<div class="preview-icon bg-warning">
-										<i class="icon-cursor-move mx-0"></i>
-									</div>
-								</div>
-								<div class="preview-item-content">
-									<h6 class="preview-subject font-weight-medium">Settings</h6>
-									<p class="font-weight-light small-text">
-										Private message
-									</p>
-								</div>
-							</a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item preview-item">
-								<div class="preview-thumbnail">
-									<div class="preview-icon bg-info">
-										<i class="fas fa-power-off mx-0"></i>
-									</div>
-								</div>
-								<div class="preview-item-content">
-									<h6 class="preview-subject font-weight-medium">New user registration</h6>
-									<p class="font-weight-light small-text">
-										2 days ago
-									</p>
-								</div>
-							</a>
-						</div>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link count-indicator dropdown-toggle" id="messageDropdown"
-							href="https://www.bootstrapdash.com/demo/libertyui/template/demo/vertical-default-dark/pages/samples/blank-page.html#"
-							data-toggle="dropdown" aria-expanded="false">
-							<i class="fas fa-power-off mx-0"></i>
+						<a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown"
+							aria-expanded="false">
+							<i class="far fa-envelope mx-0"></i>
 							<span class="count"></span>
 						</a>
 						<div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
@@ -184,20 +126,72 @@
 							</a>
 						</div>
 					</li>
-					<li class="nav-item nav-settings d-none d-lg-block">
+					<li class="nav-item dropdown">
+						<a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+							<i class="fas fa-tools mx-0"></i>
+							<span class="count"></span>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+							aria-labelledby="notificationDropdown">
+							<a class="dropdown-item">
+								<p class="mb-0 font-weight-normal float-left">Menu del usuario</p>
+								<span class="badge badge-pill badge-warning float-right">View all</span>
+							</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item preview-item" href="<?= base_url()?>usuario/perfil">
+								<div class="preview-thumbnail">
+									<div class="preview-icon bg-success">
+										<i class="fas fa-user-cog mx-0"></i>
+									</div>
+								</div>
+								<div class="preview-item-content">
+									<h6 class="preview-subject font-weight-medium">perfil
+									</h6>
+
+								</div>
+							</a>
+							<div class=" dropdown-divider">
+							</div>
+							<a class="dropdown-item preview-item">
+								<div class="preview-thumbnail">
+									<div class="preview-icon bg-warning">
+										<i class="icon-cursor-move mx-0"></i>
+									</div>
+								</div>
+								<div class="preview-item-content">
+									<h6 class="preview-subject font-weight-medium">Settings</h6>
+									<p class="font-weight-light small-text">
+										Private message
+									</p>
+								</div>
+							</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item preview-item" href="<?= base_url()?>logout">
+								<div class="preview-thumbnail">
+									<div class="preview-icon bg-info">
+										<i class="fas fa-power-off mx-0"></i>
+									</div>
+								</div>
+								<div class="preview-item-content">
+									<h6 class="preview-subject font-weight-medium">Cerrar session</h6>
+								</div>
+							</a>
+						</div>
+					</li>
+					<!-- <li class="nav-item nav-settings d-none d-lg-block">
 						<a class="nav-link" href="<?= base_url()?>">
 							<i class="fas fa-th-large"></i>
 						</a>
-					</li>
-					<li class="nav-item d-none d-lg-block">
+					</li> -->
+					<!-- <li class="nav-item d-none d-lg-block">
 						<a class="nav-link" href="<?= base_url()?>logout">
 							<i class="fas fa-power-off mx-0"></i>
 						</a>
-					</li>
+					</li> -->
 				</ul>
 				<button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
 					data-toggle="offcanvas">
-					<span class="icon-menu"></span>
+					<span class="fas fa-bars icon-menu"></span>
 				</button>
 			</div>
 		</nav>

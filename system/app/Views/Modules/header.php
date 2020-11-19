@@ -8,10 +8,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title><?= $data['page_title']?></title>
 	<!-- plugins:css -->
-	<link rel="stylesheet" href="<?= PLUGINS?>flag-icon.min.css">
-	<link rel="stylesheet" href="<?= PLUGINS?>materialdesignicons.min.css">
+	<!-- <link rel="stylesheet" href="<?= PLUGINS?>materialdesignicons.min.css">
 	<link rel="stylesheet" href="<?= PLUGINS?>font-awesome.min.css">
-	<link rel="stylesheet" href="<?= PLUGINS?>simple-line-icons.css">
+	<link rel="stylesheet" href="<?= PLUGINS?>simple-line-icons.css"> -->
 	<link rel="stylesheet" href="<?= PLUGINS?>feather.css">
 	<link rel="stylesheet" href="<?= PLUGINS?>vendor.bundle.base.css">
 	<!-- endinject -->
@@ -19,7 +18,7 @@
 	<link rel="stylesheet" href="<?= PLUGINS?>dataTable/dataTables.bootstrap4.css">
 	<link rel="stylesheet" href="<?= PLUGINS?>style.css">
 	<!-- endinject -->
-	<link rel="shortcut icon" href="<?= IMG?>favicon.png">
+	<link rel="shortcut icon" href="<?= IMG?>logo-mini.svg">
 
 </head>
 
