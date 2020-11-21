@@ -25,12 +25,15 @@
 							<table id="tableCuenta" class="table table-striped" style="width:100%">
 								<thead>
 									<tr>
-										<th>Name</th>
-										<th>Position</th>
-										<th>Office</th>
-										<th>Age</th>
-										<th>Start date</th>
-										<th>Salary</th>
+										<th>ID</th>
+										<th>Banco</th>
+										<th>Tipo cuenta</th>
+										<th># Cuenta</th>
+										<th>Usuario</th>
+										<th>Clave</th>
+										<th>Clave Telefonica</th>
+										<th>Clave Especial</th>
+										<th>Fecha de modificacion</th>
 									</tr>
 								</thead>
 								<tbody></tbody>

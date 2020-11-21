@@ -21,7 +21,7 @@
 								<img src="<?= IMG?>logo-inverse.svg" alt="logo">
 							</div>
 							<h4>Bienvenido de vuelta!</h4>
-							<h6 class="font-weight-light">Happy to see you again!</h6>
+							<h6 class="font-weight-light">Ingresa tus credenciales y continua!</h6>
 							<form class="pt-3" id="formLogin">
 								<div class="form-group">
 									<label for="textUser">Username</label>

@@ -43,8 +43,8 @@ function topFunction() {
 	<!-- /move top -->
 
 
-	<!-- <script src="<?= PLUGINS?>jquery/jquery-3.3.1.min.js"></script>
-	<script src="<?= PLUGINS?>jquery/jquery-1.10.2.min.js"></script> -->
+	<script src="<?= PLUGINS?>jquery/jquery-3.3.1.min.js"></script>
+	<!-- <script src="<?= PLUGINS?>jquery/jquery-1.10.2.min.js"></script> -->
 
 	<!-- loading-gif Js -->
 	<!-- <script src="<?= PLUGINS?>modernizr/modernizr.js"></script> -->
@@ -68,7 +68,7 @@ const base_url = "<?= base_url()?>";
 	<script src="<?= PLUGINS?>all.js"></script>
 	<!-- plugin js for this page -->
 
-	<script src="<?= PLUGINS?>jquery/jquery-3.3.1.min.js"></script>
+	<!-- <script src="<?= PLUGINS?>jquery/jquery-3.3.1.min.js"></script> -->
 
 	<script src="<?= PLUGINS?>dataTable/jquery.dataTables.js"></script>
 	<script src="<?= PLUGINS?>dataTable/dataTables.bootstrap4.js"></script>

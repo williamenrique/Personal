@@ -33,21 +33,21 @@ document.addEventListener('DOMContentLoaded', function () {
 			"name": "medium",
 			"width": "1188"
 		},
-		// "ajax": {
-		// 	"url": ' ' + base_url + 'Cuenta/getCuenta',
-		// 	"dataSrc": ''
-		// },
-		// "columns": [
-		// 	{ 'data': 'user_id' },
-		// 	{ 'data': 'user_nick' },
-		// 	{ 'data': 'user_nombres' },
-		// 	{ 'data': 'user_apellidos' },
-		// 	{ 'data': 'user_email' },
-		// 	{ 'data': 'user_tlf' },
-		// 	{ 'data': 'rol_name' },
-		// 	{ 'data': 'user_status' },
-		// 	{ 'data': 'opciones' }
-		// ],
+		"ajax": {
+			"url": ' ' + base_url + 'Cuenta/getCuenta',
+			"dataSrc": ''
+		},
+		"columns": [
+			{ 'data': 'id_cuenta' },
+			{ 'data': 'banco' },
+			{ 'data': 'tipo_cta' },
+			{ 'data': 'numero_cta' },
+			{ 'data': 'usuario' },
+			{ 'data': 'pass' },
+			{ 'data': 'clave_tlf' },
+			{ 'data': 'clave_especial' },
+			{ 'data': 'fecha_mod' }
+		],
 		"resonsieve": "true",
 		"bDestroy": true,
 		"iDisplayLength": 10,

@@ -13,4 +13,11 @@ class Cuenta extends Controllers{
 		$data['page_functions'] = "function.cuenta.js";
 		$this->views->getViews($this, "cuenta",$data);
 	}
+
+	public function getCuenta(){
+			$arrData = $this->model->selectCuenta();
+			//convertir el arreglo de datos en un formato json
+			echo json_encode($arrData,JSON_UNESCAPED_UNICODE);
+			die();
+	}
 }
