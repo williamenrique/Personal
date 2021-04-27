@@ -1,0 +1,33 @@
+.notBlock {
+    display: none !important;
+}
+
+.prevPhoto {
+    position: relative;
+}
+
+.delPhoto {
+    color: #FFF;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    background: red;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.menu-is-opening {
+    display: block !important;
+}
+//imagen
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
