@@ -25,9 +25,11 @@ const LOAD = BASE_URL."system/core/Libraries/Load.php";
 //constantes de base de datos
 const DB_HOST = "localhost";
 const DB_USER = "root";
-const DB_PASS = "root";
+const DB_PASS = "";
 const DB_NAME = "db_personal";
 const DB_CHARSET = "charset=utf8";
+const NUM_ITEMS_BY_PAGE = "5";
+
 
 
 //constantes de encriptacion

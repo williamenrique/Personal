@@ -8,16 +8,16 @@
 				<form id="formLogin">
 					<div class="form-group position-relative has-icon-left mb-4">
 						<input type="text" class="form-control form-control-xl" placeholder="Email o usuario" id="textUser"
-							name="textUser">
+							name="textUser" autofocus>
 						<div class="form-control-icon">
-							<i class="bi bi-person"></i>
+							<i class="fas fa-user-shield"></i>
 						</div>
 					</div>
 					<div class="form-group position-relative has-icon-left mb-4">
 						<input type="password" class="form-control form-control-xl" placeholder="Password" id="textPass"
 							name="textPass">
 						<div class="form-control-icon">
-							<i class="bi bi-shield-lock"></i>
+							<i class="fas fa-key"></i>
 						</div>
 					</div>
 					<div class="box-button">

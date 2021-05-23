@@ -53,35 +53,18 @@ getModal('modals',$data);
 		<?php
 		endif;
 		?>
-		<div class="col-6 col-lg-3 col-md-6">
-			<div class="card">
-				<div class="card-body px-3 py-4-5">
-					<div class="row">
-						<div class="col-md-4">
-							<div class="stats-icon green">
-								<i class="iconly-boldAdd-User"></i>
-							</div>
-						</div>
-						<div class="col-md-8">
-							<h6 class="text-muted font-semibold">Following</h6>
-							<h6 class="font-extrabold mb-0">80.000</h6>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-6 col-lg-3 col-md-6">
+
+		<div class="col-6 col-lg-3 col-md-6 ">
 			<div class="card">
 				<div class="card-body px-3 py-4-5">
 					<div class="row">
 						<div class="col-md-4">
 							<div class="stats-icon red">
-								<i class="iconly-boldBookmark"></i>
+								<p class="font-extrabold mb-0 cantEvent" style="color:#fff"></p>
 							</div>
 						</div>
 						<div class="col-md-8">
-							<h6 class="text-muted font-semibold">Saved Post</h6>
-							<h6 class="font-extrabold mb-0">112</h6>
+							<h6 class="text-muted font-semibold h6" data="este es un data">Eventos proximos</h6>
 						</div>
 					</div>
 				</div>
@@ -89,40 +72,23 @@ getModal('modals',$data);
 		</div>
 	</div>
 	<div class="row">
-		<div id="script-warning"></div>
-		<div class="col-md-9">
+
+		<div class="col-sm-12 col-md-9 col-lg-8">
 			<div id='calendario'></div>
 		</div>
-		<div class="col-md-3">
+		<div class="col-sm-12 col-md-3 col-lg-4">
 			<button type="button" class="btn btn-primary btn-sm mr-3 mt-1" onclick="openModal('modalCalendar')">
 				<i class="fas fa-plus"></i>
 				Agregar evento
 			</button>
-			<div class="list-group  mt-5">
-				<a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-					<div class="d-flex w-100 justify-content-between">
-						<h5 class="mb-1">List group item heading</h5>
-						<small>3 days ago</small>
-					</div>
-					<p class="mb-1">Some placeholder content in a paragraph.</p>
-					<small>And some small print.</small>
+			<div class="list-group  mt-4">
+				<a href="#" class="list-group-item list-group-item-action active text-center" aria-current="true">
+					<p class="mb-1 ">Lista de eventos</p>
 				</a>
-				<a href="#" class="list-group-item list-group-item-action">
-					<div class="d-flex w-100 justify-content-between">
-						<h5 class="mb-1">List group item heading</h5>
-						<small class="text-muted">3 days ago</small>
-					</div>
-					<p class="mb-1">Some placeholder content in a paragraph.</p>
-					<small class="text-muted">And some muted small print.</small>
-				</a>
-				<a href="#" class="list-group-item list-group-item-action">
-					<div class="d-flex w-100 justify-content-between">
-						<h5 class="mb-1">List group item heading</h5>
-						<small class="text-muted">3 days ago</small>
-					</div>
-					<p class="mb-1">Some placeholder content in a paragraph.</p>
-					<small class="text-muted">And some muted small print.</small>
-				</a>
+				<ul id="list" class="listEvent list-group"></ul>
+				<div class="navegacion">
+					<?= navPaginar();?>
+				</div>
 			</div>
 		</div>
 	</div>

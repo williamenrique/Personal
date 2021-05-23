@@ -509,7 +509,9 @@
 }
 
 .dropdown-toggle:after {
-    color: #fff
+    /* color: #fff */
+    color: transparent;
+    display: none;
 }
 
 .dropdown-menu-large {
@@ -970,7 +972,7 @@
 .sidebar-wrapper .menu .sidebar-link {
     display: block;
     padding: .7rem 1rem;
-    font-size: 1rem;
+    font-size: 1.1rem;
     display: flex;
     align-items: center;
     border-radius: .5rem;

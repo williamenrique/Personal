@@ -42,9 +42,7 @@ if (document.querySelector("." + page_menu_open)) {
 		<script src="<?= JS.$data['page_function']?>"></script>
 		<script src="<?= JS?>function.main.js"></script>
 		<script src="<?= JS?>main.js"></script>
-
-
-
+		<script src="<?= JS?>functions.js"></script>
 		</body>
 
 		</html>

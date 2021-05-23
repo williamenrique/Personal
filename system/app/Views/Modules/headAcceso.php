@@ -12,10 +12,11 @@
 			content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
 		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="<?= CSS?>bootstrap.css">
-		<link rel="stylesheet" href="<?= PLUGINS?>bootstrap-icons/bootstrap-icons.css">
+		<script src="<?= PLUGINS?>fontawesome/all.min.js"></script>
+		<!-- <link rel="stylesheet" href="<?= PLUGINS?>bootstrap-icons/bootstrap-icons.css"> -->
 		<link rel="stylesheet" href="<?= PLUGINS?>toastify/toastify.css">
-		<link rel="stylesheet" href="<?= CSS?>app.css">
 		<link rel="stylesheet" href="<?= CSS?>pages/auth.css">
+		<link rel="stylesheet" href="<?= CSS?>app.css">
 		<link rel="shortcut icon" href="<?= IMG?>logo-mini.svg">
 		<link rel="stylesheet" href="<?= PLUGINS?>sweetalert/sweetalert2.css">
 	</head>

@@ -36,7 +36,9 @@ function openModal(modal) {
     // document.querySelector('#btnActionForm').classList.replace('btn-info', 'btn-primary');
     // document.querySelector('#btnText').innerHTML = 'Guardar';
     // document.querySelector('#formRol').reset();
-
+    document.querySelector('.btnSet').style.display = 'block';
+    document.querySelector('.btnDelete').style.display = 'none';
+    document.querySelector('.btnUpdate').style.display = 'none';
     $('#' + modal).modal("show");
 }
 if (document.querySelector('#formEmail')) {

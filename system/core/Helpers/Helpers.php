@@ -482,3 +482,54 @@ function emailQuestion($rows){
 	// Success
 	$mail->send();
 }
+// funcion para obtener navegacion de paginar
+function navPaginar(){
+	require_once ("system/app/Models/HomeModel.php");
+	$objPaginar = new HomeModel();
+	$strStartEvent = date('Y-m-d');
+	$htmlOptions = "";
+	// total de filas
+	$num_total_rows = $objPaginar->countEvents($strStartEvent);
+
+	$num_total_rows = count($num_total_rows);
+	$pages = $num_total_rows / NUM_ITEMS_BY_PAGE;
+	$pages = ceil($pages);
+	if($num_total_rows > 0){
+		// numeros de paginas
+		$num_pages = ceil($num_total_rows / NUM_ITEMS_BY_PAGE);
+		$result = $objPaginar->selectEvents($strStartEvent,0,NUM_ITEMS_BY_PAGE);
+		// if(count($result) > 0 ){
+		// 	foreach ($result as $event) {
+		// 		echo $event['title']."<br>";
+		// 	}
+		// }
+		if($num_pages > 1){
+			$htmlOptions .= "<nav aria-label='...' class='mb-2'>
+												<ul class='pagination'>
+													<li class='page-item disabled'>
+														<a class='page-link' href='#' tabindex='-1' data= '{$num_pages}' aria-disabled='true'>Previous</a>
+													</li>";
+			for ($i=1;$i<=$num_pages;$i++) {
+					$class_active = '';
+					if ($i == 1) {
+							$class_active = 'active';
+					}
+					$htmlOptions .= '<li class="page-item '.$class_active.'"><a class="page-link" href="#" data="'.$i.'">'.$i.'</a></li>';
+			}
+			$htmlOptions .= '<li class="page-item disabled">
+										<a class="page-link" href="#" tabindex="-1" aria-disabled="true">Next</a>
+									</li>
+								</ul>
+							</nav> ';
+
+		}
+	}else if($num_total_rows == 0){
+		$htmlOptions .="
+											<div class='alert alert-info mt-1 text-center' role='alert'>
+												NO HAY EVENTOS PROXIMOS
+											</div>
+										";
+	}
+
+	return $htmlOptions;
+}

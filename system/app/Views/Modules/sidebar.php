@@ -16,14 +16,15 @@
 
 				<li class="sidebar-item home">
 					<a href="<?= base_url()?>" class='sidebar-link'>
-						<i class="bi bi-grid-fill"></i>
+						<!-- <i class="bi bi-grid-fill"></i> -->
+						<i class="fas fa-th-large"></i>
 						<span>Dashboard</span>
 					</a>
 				</li>
 
 				<li class="sidebar-item  has-sub menu-cuenta">
 					<a href="#" class='sidebar-link'>
-						<i class="bi bi-collection-fill"></i>
+						<i class="fas fa-hand-holding-usd"></i>
 						<span>Cuentas</span>
 					</a>
 					<ul class="submenu sub-menu-cuenta">
@@ -37,7 +38,7 @@
 				</li>
 				<li class="sidebar-item sitios">
 					<a href="<?= base_url()?>sitio/web" class='sidebar-link'>
-						<i class="bi bi-grid-fill"></i>
+						<i class="fas fa-globe-asia"></i>
 						<span>Sitios web</span>
 					</a>
 				</li>

@@ -14,10 +14,10 @@
 		<link href="<?= PLUGINS?>bootstrap-select-1.13.14/css/bootstrap-select.min.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="<?= CSS?>bootstrap.css">
-		<link rel="stylesheet" href="<?= PLUGINS?>iconly/bold.css">
+		<!-- <link rel="stylesheet" href="<?= PLUGINS?>iconly/bold.css"> -->
 		<link rel="stylesheet" href="<?= PLUGINS?>perfect-scrollbar/perfect-scrollbar.css">
-		<link rel="stylesheet" href="<?= PLUGINS?>bootstrap-icons/bootstrap-icons.css">
-		<link rel="stylesheet" href="<?= PLUGINS?>fontawesome/all.min.css">
+		<!-- <link rel="stylesheet" href="<?= PLUGINS?>bootstrap-icons/bootstrap-icons.css"> -->
+		<!-- <link rel="stylesheet" href="<?= PLUGINS?>fontawesome/all.min.css"> -->
 		<link rel="stylesheet" href="<?= PLUGINS?>DataTable/dataTables.bootstrap5.min.css">
 		<link rel="stylesheet" href="<?= CSS?>style.css">
 		<link rel="stylesheet" href="<?= CSS?>app.css">
@@ -25,6 +25,8 @@
 		<script src="<?= PLUGINS?>FullCalendar/main.min.js"></script>
 		<script src="<?= PLUGINS?>FullCalendar/es.js"></script>
 		<script src="<?= PLUGINS?>FullCalendar/locales-all.min.js"></script>
+		<!-- <script src="<?= JS?>paginador.js"></script> -->
+		<!-- <script src="<?= JS?>function.paginator.js"></script> -->
 	</head>
 
 	<body>

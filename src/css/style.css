@@ -29,3 +29,43 @@
 .menu-is-opening {
     display: block !important;
 }
+
+.color_page {
+    color: #FFF !important;
+    background: #435EBE !important;
+    border: none !important;
+    border-radius: 2px !important;
+}
+
+.flecha {
+    color: #000 !important;
+    background: transparent !important;
+    border: none !important;
+    margin: 0 5px !important;
+    font-size: 25px !important;
+}
+
+nav>button {
+    color: #000 !important;
+    background: #EEEEEE !important;
+    border: none !important;
+    border-radius: 2px !important;
+    margin: 0 2px;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
+}
+
+.w-1 {
+    width: 30%;
+    padding-right: 5px;
+    margin-right: 2px;
+}
+
+.box>nav {
+    width: 100%;
+}

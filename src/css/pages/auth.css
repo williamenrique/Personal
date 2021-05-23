@@ -46,10 +46,16 @@ body {
     #auth #auth-left {
         padding: 2rem 5rem
     }
-		#auth #auth-left .auth-subtitle {
-			font-size: 1rem;
-			line-height: 2rem;
-			color: #a8aebb;
-			 text-align: center;
-	}
+    #auth #auth-left .auth-subtitle {
+        font-size: 1rem;
+        line-height: 2rem;
+        color: #a8aebb;
+        text-align: center;
+    }
+}
+
+.form-control-icon svg {
+    width: 1.5rem !important;
+    color: #6c757d;
+    font-size: 2rem;
 }
