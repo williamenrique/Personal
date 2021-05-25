@@ -31,7 +31,7 @@
 
 	<body>
 		<div id="app">
-			<?php include 'system/app/views/Modules/sidebar.php'?>
+			<?php include "sidebar.php";?>
 			<div id="main" class='layout-navbar'>
-				<?php include 'system/app/views/Modules/nav.php'?>
+				<?php include 'nav.php'?>
 				<div id="main-content">
