@@ -60,7 +60,7 @@ class Acceso extends Controllers{
 					$opcion = 1;
 					$tipo = "disblockCount";
 					$intentofail = $this->model->genToken($arrDataInt['user_id'], $strCodigo , $opcion);
-					$email = emailBlok($arrDataInt['email'],"Desbloquear cuenta","Hemos detectado que tiene la cuenta bloqueada, estas de suerte puedes reestablecerla siguendos los pasos",$strCodigo,$arrDataInt['nombre'],$arrDataInt['user_id'],$arrDataInt['ci'], $tipo);
+					// $email = emailBlok($arrDataInt['email'],"Desbloquear cuenta","Hemos detectado que tiene la cuenta bloqueada, estas de suerte puedes reestablecerla siguendos los pasos",$strCodigo,$arrDataInt['nombre'],$arrDataInt['user_id'],$arrDataInt['ci'], $tipo);
 				}	
 			}
 			echo json_encode($arrResponse, JSON_UNESCAPED_UNICODE);
@@ -105,7 +105,7 @@ class Acceso extends Controllers{
 					mkdir($ruta, 0777, true);
 					$tipo = "login";
 					$arrResponse = array("status" => true, "msg" => "Cuenta creada <br> se le envio un email");
-					$email = email($registerName,$registerEmail,"Nueva cuenta creada","Felicitaciones haz creado una cuenta con nosotros, ponte en contacto con el administrador para la activacion.", $tipo);
+					// $email = email($registerName,$registerEmail,"Nueva cuenta creada","Felicitaciones haz creado una cuenta con nosotros, ponte en contacto con el administrador para la activacion.", $tipo);
 					$sqlUpdate = $this->model->updateUserRuta($requestUser,$registerCi,$registerEmail,$codUser,$ruta);
 				}else if($requestUser == "exist"){
 				// evaluar si la cedula no esta registrada al igual que el email
@@ -146,7 +146,7 @@ class Acceso extends Controllers{
 					// generamos el token
 					$intentofail = $this->model->genToken($comprobarEmail['user_id'], $strCodigo , $opcion);
 					// enviamos un email al usuario para desbloquear la cuenta
-					$email = emailBlok($comprobarEmail['email'],"Olvido clave de acceso","Haz solicitado reestablecer tu clave, si es asi sigue los pasos que se te indicaran",$strCodigo,$comprobarEmail['nombre'],$comprobarEmail['user_id'],$comprobarEmail['ci'], $tipo);
+					// $email = emailBlok($comprobarEmail['email'],"Olvido clave de acceso","Haz solicitado reestablecer tu clave, si es asi sigue los pasos que se te indicaran",$strCodigo,$comprobarEmail['nombre'],$comprobarEmail['user_id'],$comprobarEmail['ci'], $tipo);
 					$arrResponse = array("status" => true, "msg" => "Se envio un mail");
 				}else{
 					$arrResponse = array("status" => false, "msg" => "Email no esta registrado");
