@@ -33,7 +33,7 @@ class AccesoModel extends Mysql {
 		$this->strTxtUser = $txtUser;
 		// echo $sql = "SELECT * FROM table_user tu JOIN table_block  tb WHERE  tu.user_id = tb.user_id AND (tu.email = '$this->strTxtUser' OR tu.user = '$this->strTxtUser') AND tu.status != 0 ";
 	// echo	$sql = "SELECT tu.user, tu.email FROM table_user tu JOIN (table_block tb JOIN table_seguridad ts ) WHERE tu.user_id = tb.user_id AND tu.user_id = ts.user_id AND (tu.email = '$this->strTxtUser' OR tu.user = '$this->strTxtUser') AND tu.status != 0 ";
-	$sql = "SELECT  tu.user, tu.email FROM table_user tu JOIN (table_block tb JOIN table_seguridad ts ) WHERE tu.user_id = tb.user_id AND tu.user_id = ts.user_id AND tu.status != 0 ";
+	$sql = "SELECT * FROM table_user tu JOIN (table_block tb JOIN table_seguridad ts ) WHERE tu.user_id = tb.user_id AND tu.user_id = ts.user_id AND tu.status != 0 ";
 		$request = $this->select($sql);
 		return $request;
 	}
