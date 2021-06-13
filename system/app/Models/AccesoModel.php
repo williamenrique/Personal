@@ -32,7 +32,8 @@ class AccesoModel extends Mysql {
 	public function user(string $txtUser){
 		$this->strTxtUser = $txtUser;
 		// echo $sql = "SELECT * FROM table_user tu JOIN table_block  tb WHERE  tu.user_id = tb.user_id AND (tu.email = '$this->strTxtUser' OR tu.user = '$this->strTxtUser') AND tu.status != 0 ";
-		$sql = "SELECT * FROM table_user tu JOIN (table_block tb JOIN table_seguridad ts ) WHERE tu.user_id = tb.user_id AND tu.user_id = ts.user_id AND (tu.email = '$this->strTxtUser' OR tu.user = '$this->strTxtUser') AND tu.status != 0 ";
+	// echo	$sql = "SELECT tu.user, tu.email FROM table_user tu JOIN (table_block tb JOIN table_seguridad ts ) WHERE tu.user_id = tb.user_id AND tu.user_id = ts.user_id AND (tu.email = '$this->strTxtUser' OR tu.user = '$this->strTxtUser') AND tu.status != 0 ";
+	$sql = "SELECT * FROM table_user tu JOIN (table_block tb JOIN table_seguridad ts ) WHERE tu.user_id = tb.user_id AND tu.user_id = ts.user_id AND tu.status != 0 ";
 		$request = $this->select($sql);
 		return $request;
 	}
@@ -91,8 +92,8 @@ class AccesoModel extends Mysql {
 		//si no encontro ningun resultado insertamos el usuario
 		if(empty($request)){
 			// insertar el nuevo usuario
-			$queryInsert = "INSERT INTO table_user(ci,nombre,email,status,img,pass) VALUES(?,?,?,?,?,?)";
-			$arrData = array($this->intIdentificacion,$this->strTxtNombre,$this->strTxtEmail,$this->intListStatus,$this->strImg,$this->strTxtPass);
+			$queryInsert = "INSERT INTO table_user(user,ci,nombre,email,status,img,pass) VALUES(?,?,?,?,?,?,?)";
+			$arrData = array('default',$this->intIdentificacion,$this->strTxtNombre,$this->strTxtEmail,$this->intListStatus,$this->strImg,$this->strTxtPass);
 			$requestInsert = $this->insert($queryInsert,$arrData);
 			//inicializar tabla de bloqueo
 			$sqlIntento = "INSERT INTO table_block(user_id,intentos,token) VALUES(?,?,?)";
