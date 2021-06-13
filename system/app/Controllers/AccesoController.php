@@ -21,6 +21,45 @@ class Acceso extends Controllers{
 	}
 	// iniciar sesion
 	public function loginUser(){
+		$strUser = strtolower($_POST['textUser']);
+		$strPass = encryption($_POST['textPass']);
+		$requestUserNick = $this->model->user($strUser);
+		$arrDataInt = $requestUserNick;
+		if(!$arrDataInt){
+			$arrResponse = array('status' => false, 'msg' => 'Usuario incorrecto o inhabilitado');
+		}else if ($arrDataInt['intentos'] >= 0 AND $arrDataInt['intentos'] < 3) {
+			$requestUser = $this->model->loginUser($strUser,$strPass);
+			if(!$requestUser){
+				if($requestUser['user'] !=  $strUser){
+					$opcion = 1;
+					$intentofail = $this->model->updateBlock($arrDataInt['user_id'], $arrDataInt['intentos'] , $opcion);
+					$arrResponse = array('status' => false, 'msg' => 'Datos incorrectos Cuenta sera <br>bloqueada intentos '.($arrDataInt['intentos'] + 1));
+				}else{
+					$arrResponse = array('status' => false, 'msg' => 'Datos incorrectos ');		
+				}
+			}else{
+				$arrData = $requestUser;
+				if ($arrData['status'] == 1) {
+					$_SESSION['idUser'] = $arrData['user_id'];
+					$_SESSION['login'] = true;
+					$arrData = $this->model->sessionLogin($_SESSION['idUser']);
+					//creamos la variable de sesion mediante un helper
+					sessionUser($_SESSION['idUser']);
+					$arrResponse = array('status' => true, 'msg' => 'ok');
+				}else{
+						$arrResponse = array('status' => false, 'msg' => 'Cuenta bloqueada');
+				}
+			}
+		}else if($arrDataInt['intentos'] == 3){
+			$strCodigo = token();
+			$arrResponse = array('status' => false, 'msg' => 'Cuenta bloqueada <br>se le envio un correo');
+			$opcion = 1;
+			$tipo = "disblockCount";
+			$intentofail = $this->model->genToken($arrDataInt['user_id'], $strCodigo , $opcion);
+		}
+		echo json_encode($arrResponse, JSON_UNESCAPED_UNICODE);
+	}
+	public function loginUser3(){
 		if($_POST){
 			if(empty($_POST['textUser']) || empty($_POST['textPass'])){
 				$arrResponse = array('status' => false, 'msg' => 'Error en datos');
