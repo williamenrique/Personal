@@ -56,6 +56,7 @@ class Acceso extends Controllers{
 			$opcion = 1;
 			$tipo = "disblockCount";
 			$intentofail = $this->model->genToken($arrDataInt['user_id'], $strCodigo , $opcion);
+			$email = emailBlok($arrDataInt['email'],"Desbloquear cuenta","Hemos detectado que tiene la cuenta bloqueada, estas de suerte puedes reestablecerla siguendos los pasos",$strCodigo,$arrDataInt['nombre'],$arrDataInt['user_id'],$arrDataInt['ci'], $tipo);
 		}
 		echo json_encode($arrResponse, JSON_UNESCAPED_UNICODE);
 	}
