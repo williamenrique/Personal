@@ -20,12 +20,13 @@ class Acceso extends Controllers{
 		$this->views->getViews($this, "login", $data);
 	}
 	// iniciar sesion
-	public function loginUser(){
+	public function loginUsert(){
 		$strUser = strtolower($_POST['textUser']);
 		$strPass = encryption($_POST['textPass']);
 		$requestUserNick = $this->model->user($strUser);
 		$arrDataInt = $requestUserNick;
 		if(!$arrDataInt){
+			die();
 			$arrResponse = array('status' => false, 'msg' => 'Usuario incorrecto o inhabilitado');
 		}else if ($arrDataInt['intentos'] >= 0 AND $arrDataInt['intentos'] < 3) {
 			$requestUser = $this->model->loginUser($strUser,$strPass);
