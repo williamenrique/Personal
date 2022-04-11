@@ -68,7 +68,7 @@ class CuentaModel extends Mysql {
 	// seleccionar todas las cuentas de 
 	public function getCuentas(int $intTipo){
 		$this->intTipo = $intTipo;
-		$sql = "SELECT * FROM table_cuenta WHERE tipo = $this->intTipo";
+		$sql = "SELECT * FROM table_cuenta WHERE tipoC = $this->intTipo";
 		$request = $this->select_all($sql);
 		return $request;
 	}
@@ -76,7 +76,7 @@ class CuentaModel extends Mysql {
 	public function getCuenta(int $intIdCuenta, int $intTipo){
 		$this->intIdCuenta = $intIdCuenta;
 		$this->intTipo = $intTipo;
-		$sql = "SELECT * FROM table_cuenta WHERE idCuenta = $this->intIdCuenta AND tipo = $this->intTipo";
+		$sql = "SELECT * FROM table_cuenta WHERE idCuenta = $this->intIdCuenta AND tipoC = $this->intTipo";
 		$request = $this->select($sql);
 		return $request;
 	}
