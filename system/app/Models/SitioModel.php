@@ -33,4 +33,11 @@ class SitioModel extends Mysql {
 		$request = $this->select($sql);
 		return $request;
 	}
+		// seleccionar un sitio especifica
+	public function deleteSitio(int $intSitio){
+		$this->intSitio = $intSitio;
+	echo	$sql = "UPDATE table_sitio SET status = 0 WHERE  idSitio = $this->intSitio";
+		$request = $this->update($sql);
+		return $request;
+	}
 }

@@ -24,7 +24,7 @@ getModal('modalSitio',$data);
 		<div class="card">
 			<div class="card-header">
 				<h3>
-					<button type="button" class="btn btn-primary btn-sm mr-3" onclick="openModal()">
+					<button type="button" class="btn btn-primary btn-sm mr-3" onclick="openModal('modalSitio')">
 						<i class="fas fa-plus"></i>
 						Agregar
 					</button>

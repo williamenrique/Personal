@@ -89,7 +89,41 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
+    //eliminar un sitio
+
 })
+
+function fntDelSitio(inSitio) {
+    var request = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
+    var ajaxUrl = base_url + 'Sitio/delSitio' + '?idSitio=' + inSitio;
+    //creamos un objeto del formulario con los datos haciendo referencia a formData
+    // var formData = new FormData(formCuenta);
+    //prepara los datos por ajax preparando el dom
+    request.open('POST', ajaxUrl, true);
+    //envio de datos del formulario que se almacena enla variable
+    request.send();
+    //obtenemos los resultados y evaluamos
+    request.onreadystatechange = function() {
+        if (request.readyState == 4 && request.status == 200) {
+            //obtenemos los datos y convertimos en JSON
+            let objData = JSON.parse(request.responseText);
+            if (objData.status) {
+                notifi(objData.msg, "info");
+                // formCuenta.reset();
+                // $('#modalCuentaP').modal('hide');
+                // let tableCuentaP = $('#tableCuentaP').DataTable();
+                //recargamos la tabla 
+                // tableCuentaP.ajax.reload(function() {
+                //     //cada vez que se haga una accion se recarga la tabla y los botones
+                //     // fntEditRol();
+                //     // fntDelRol();
+                // });
+            } else {
+                notifi(objData.msg, "error");
+            }
+        }
+    }
+}
 
 function openModal() {
     //inicializar el modal que sea nuevo rol

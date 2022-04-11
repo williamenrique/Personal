@@ -62,14 +62,25 @@ class Sitio extends Controllers {
 			$arrData[$i]['pass'] = decryption($arrData[$i]['pass']);
 			$arrData[$i]['url'] = decryption($arrData[$i]['url']);
 			$arrData[$i]['opciones'] ='<div class="">
-																	<button type="button" class="btn btn-secondary btn-sm btnPremisoRol" onClick="fntRol('.$arrData[$i]['idSitio'].')" title="Permisos"><span class="fa-fw select-all fas"></span></button>
-																	<button type="button" class="btn btn-success btn-sm btnEditRol" onClick="fntEditRol('.$arrData[$i]['idSitio'].')" title="Editar" ><span class="fa fa-edit" aria-hidden="true"></i></button>
-																	<button type="button" class="btn btn-danger btn-sm btnDelRol" onClick="fntDelRol('.$arrData[$i]['idSitio'].')" title="Eliminar"><i class="fa fa-trash" aria-hidden="true"></i></button>
+																	
+																	<button type="button" class="btn btn-success btn-sm btnEditRol" onClick="fnteditSitio('.$arrData[$i]['idSitio'].')" title="Editar" ><span class="fa fa-edit" aria-hidden="true"></i></button>
+																	<button type="button" class="btn btn-danger btn-sm btnDelRol" onClick="fntDelSitio('.$arrData[$i]['idSitio'].')" title="Eliminar"><i class="fa fa-trash" aria-hidden="true"></i></button>
 																</div>';
 		}
 		//convertir el arreglo de datos en un formato json
 		echo json_encode($arrData,JSON_UNESCAPED_UNICODE);
 		die();
+	}
+	public function delSitio(){
+		$intSitio = $_GET['idSitio'];
+		$requestUpdate = $this->model->deleteSitio($intSitio);
+		if($requestUpdate > 0){
+			echo   "bien";
+		}else{
+			echo 'error';
+		}
+		die();
+		echo json_encode($respuesta,JSON_UNESCAPED_UNICODE);
 	}
 		/**
 	 * cargar vista  y metodos

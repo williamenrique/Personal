@@ -175,12 +175,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         }
-		
-		const btnAccion = (opcion) => {
-			//document.querySelector('#txtOpcion').value = opcion;
-			//enviarInfo(opcion, NuevoEvento);
-			//getEventos();
-		}
+
+
+        const btnAccion = (opcion) => {
+            //document.querySelector('#txtOpcion').value = opcion;
+            //enviarInfo(opcion, NuevoEvento);
+            //getEventos();
+        }
     })
     // llamar al modal
 function openModal(modal) {
