@@ -63,8 +63,8 @@ class Sitio extends Controllers {
 			$arrData[$i]['url'] = decryption($arrData[$i]['url']);
 			$arrData[$i]['opciones'] ='<div class="">
 																	
-																	<button type="button" class="btn btn-success btn-sm btnEditRol" onClick="fnteditSitio('.$arrData[$i]['idSitio'].')" title="Editar" ><span class="fa fa-edit" aria-hidden="true"></i></button>
-																	<button type="button" class="btn btn-danger btn-sm btnDelRol" onClick="fntDelSitio('.$arrData[$i]['idSitio'].')" title="Eliminar"><i class="fa fa-trash" aria-hidden="true"></i></button>
+																	<button type="button" class="btn btn-success btn-sm btnEditSitio" onClick="fnteditSitio('.$arrData[$i]['idSitio'].')" title="Editar" ><span class="fa fa-edit" aria-hidden="true"></i></button>
+																	<button type="button" class="btn btn-danger btn-sm btnDelSitio" onClick="fntDelSitio('.$arrData[$i]['idSitio'].')" title="Eliminar"><i class="fa fa-trash" aria-hidden="true"></i></button>
 																</div>';
 		}
 		//convertir el arreglo de datos en un formato json
