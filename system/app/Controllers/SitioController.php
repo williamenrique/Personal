@@ -72,15 +72,17 @@ class Sitio extends Controllers {
 		die();
 	}
 	public function delSitio(){
-		$intSitio = $_GET['idSitio'];
-		$requestUpdate = $this->model->deleteSitio($intSitio);
-		if($requestUpdate > 0){
-			echo   "bien";
-		}else{
-			echo 'error';
+		if($_POST){
+			$inSitio = intval($_POST['inSitio']);
+			$requestDel = $this->model->deleteSitio($inSitio);
+			if($requestDel){
+				$arrResponse = array('status' => true, 'msg' => 'Sitio eliminado');
+			}else{
+				$arrResponse = array('status' => false, 'msg' => 'Error al eliminar');
+			}
+			echo json_encode($arrResponse,JSON_UNESCAPED_UNICODE);
 		}
 		die();
-		echo json_encode($respuesta,JSON_UNESCAPED_UNICODE);
 	}
 		/**
 	 * cargar vista  y metodos
