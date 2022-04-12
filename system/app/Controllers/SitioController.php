@@ -71,6 +71,7 @@ class Sitio extends Controllers {
 		echo json_encode($arrData,JSON_UNESCAPED_UNICODE);
 		die();
 	}
+	
 	public function delSitio(){
 		if($_POST){
 			$inSitio = intval($_POST['inSitio']);
